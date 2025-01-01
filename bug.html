@@ -1,0 +1,14 @@
+This bug occurs when using Tailwind CSS with complex responsive design setups.  It manifests as styles not applying correctly on certain breakpoints or unexpected style overrides.  The issue is often subtle and difficult to trace, especially in larger projects.
+
+```html
+<div class="md:grid md:grid-cols-2 gap-4">
+  <div class="bg-blue-500 p-4">
+    <!-- Content -->
+  </div>
+  <div class="bg-red-500 p-4">
+    <!-- Content -->
+  </div>
+</div>
+```
+
+The `md:grid` class only applies the grid layout from the medium breakpoint upwards, but interactions with other classes or media queries might unexpectedly interfere.
