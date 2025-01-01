@@ -1,0 +1,20 @@
+The solution involves carefully reviewing the class hierarchy and media queries to identify the conflict.
+
+One common approach is to use more specific class names or to refactor the CSS to better manage the responsive behavior.
+
+For example, we can make the grid columns explicit for each breakpoint, avoiding unintentional overrides:
+
+```html
+<div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div class="bg-blue-500 p-4">
+    <!-- Content -->
+  </div>
+  <div class="bg-red-500 p-4">
+    <!-- Content -->
+  </div>
+  <div class="bg-green-500 p-4">
+    <!-- Content -->
+  </div>
+</div>
+```
+This solution offers greater control over the grid layout, avoiding conflicts that might arise from implicit class interactions.
